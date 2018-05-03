@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body style="background-color: grey;">
+    <p id="demo"></p>
+    <h1>Een Webpagina</h1>
+    <p id="demo2">Een Paragraaf</p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <button type="button" onclick="MyFunction()">Verander Paragraaf</button>
+    <script>
+        document.getElementById("demo").innerHTML = "My First javascript";
 
+        document.getElementById("demo3").innerHTML = 35834 + 68784;
+
+        function MyFunction() {
+            document.getElementById("demo2").innerHTML = "Paragraaf Veranderd."
+        }
+        //window.alert(54+46);
+        //console.log(110+190);
+
+        ///////////////////////////////////////////SWITCHCASE/////////////////////////////////////////////
+        function dagVanVandaag() {
+            var dag;
+            switch(new Date().getDay()) {
+                case 0:
+                    dag = "Zondag";
+                    break;
+                case 1:
+                    dag = "Maandag";
+                    break;
+                case 2:
+                    dag = "Dinsdag";
+                    break;
+                case 3:
+                    dag = "Woensdag";
+                    break;
+                case 4:
+                    dag = "Donderdag";
+                    break;
+                case 5:
+                    dag = "Vrijdag";
+                    break;
+                case 6:
+                    dag = "Zaterdag";
+            }
+            document.getElementById("demo4").innerHTML = "Vandaag is het " + dag + "!!!";
+        }
+
+        ///////////////////////////////////////////END_SWITCHCASE/////////////////////////////////////////
+        ///////////////////////////////////////////WHILE-LOOP/////////////////////////////////////////////
+        function whileLus() {
+            var tekst = "";
+            var i = 1;
+            while (i < 11) {
+                tekst += "<br>Het getal is " + i;
+                i++;
+            }
+            document.getElementById("demo5").innerHTML = tekst;
+        }
+        ///////////////////////////////////////////END_WHILE-LOOP/////////////////////////////////////////////
+    </script>
+
+    <button type="button" onclick="dagVanVandaag()">Welke dag is het vandaag?</button>
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Licht aan</button>
+    <img id="myImage" src="pic_bulboff.gif" style="width: 180px;">
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Licht uit</button>
+    <button onclick="whileLus()">De While Loop</button>
+
+
+    <a href="statements.html"><button type="button">Ga naar Statements</button></a>
+</body>
+</html>
