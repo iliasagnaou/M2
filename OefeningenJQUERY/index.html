@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQUERY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        //***************************SELECTORS*****************************//
 
+        //wanneer je de paragraaf entered
+        $(document).ready(function(){
+            //# in p1 staat voor voor id net zoals in css.
+            $("#p1").mouseenter(function() {
+                alert("You entered de paragraph!");
+
+            });
+        });
+
+        //wanneer je de paragraaf verlaat
+        $(document).ready(function(){
+            $("#p1").mouseleave(function(){
+                alert("Bye! You now leave p1!");
+            });
+        });
+
+        //dit is ook een oplossing
+        $(document).ready(function(){
+            $("#p1").hover(function(){
+                    alert("You entered p1!");
+                },
+                function(){
+                    alert("Bye! You now leave p1!");
+                });
+        });
+        //***************************SELECTORS*****************************//
+
+        //***************************EVENTS*****************************//
+        //als je klikt in de input moet het vakje grijs zijn
+        //als wegklikt word het input vakje wit
+        $(document).ready(function() {
+            $("input").focus(function(){
+                $(this).css("background.color", "#cccccc");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "#ffffff");
+            });
+        });
+
+        //verander kleur van paragraaf naarmate je erop klikt of over hovert
+        $(document).ready(function() {
+           $("#p2").on({
+               //als je erover gaat met je muis word het lichtgrijs
+              mouseenter: function(){
+                $(this).css("background-color", "lightgray");
+               },
+               //als je muis de paragraaf verlaat word het lichtblauw
+               mouseleave: function(){
+                 $(this).css("background-color", "lightblue");
+               },
+               //als je klikt op de paragraaf word het geel
+               click: function() {
+                  $(this).css("background-color", "red");
+               }
+           });
+        });
+        //***************************EVENTS*****************************//
+        $(document).ready(function(){
+            $("#Hide").click(function(){
+                $("#p3").hide();
+            });
+            $("#Show").click(function(){
+                $("#p3").show();
+            });
+        });
+
+        $(document).ready(function() {
+           $("#Hide2").click(function() {
+              $("#p4").hide(2000);
+           });
+        });
+
+        //fadeIn&FadeOut&Toggle EFFECT
+        $(document).ready(function(){
+            $("#FadeIn").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+        });
+
+        $(document).ready(function(){
+            $("#FadeOut").click(function(){
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+        });
+
+            //Toggle, combinatie van de twee
+        $(document).ready(function(){
+            $("#Toggle").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            });
+        });
+        //end_FadeIn&FadeOut&Toggle effect
+
+        //sliding
+        $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideToggle("slow");
+                });
+            });
+        //end_sliding
+
+        //***************************EFFECTEN****************************//
+
+        //***************************ANIMATIE****************************//
+        //eerste animatie
+        $(document).ready(function(){
+           $("#Banimate").click(function(){
+                $("#Danimate").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '250px',
+                    width: '250px',
+                    fontSize: '3em'
+                    //height:'toggle',
+                    //width: 'toggle'
+                });
+           });
+        });
+        //einde eerste animatie
+
+        //tweede animatie
+        $(document).ready(function(){
+            $("#Banimate2").click(function(){
+                var div = $("#Danimate2");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+            });
+        });
+
+        //***************************ANIMATIE****************************//
+    </script>
+
+</head>
+
+<body style="background-color: grey;">
+    <!--<p id="p1">Hover over deze paragraaf</p>-->
+    <p id="p2">klik of hover over deze paragraaf</p>
+
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email"><br><br>
+
+    <p id="p3">Als je klikt op de verbergknop, verdwijn ik</p>
+    <p id="p4">Als je klikt op de verbergknop, verdwijn ik langzaam</p><br><br>
+
+    <button id="Hide">Verberg</button>
+    <button id="Show">Toon</button><br>
+    <button id="Hide2">Verberg</button><br>
+
+
+    <!----****************Fades*****************-->
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+    <button id="FadeIn">FadeIn</button>
+    <button id="FadeOut">FadeOut</button>
+    <button id="Toggle">Toggle</button>
+    <!----****************Fades*****************-->
+
+    <!--*****************Sliding****************-->
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+
+    <style>
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: lightblue;
+            border: solid 1px darkblue;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+
+    </style>
+    <!--*****************Sliding****************-->
+
+    <!--*****************ANIMATIE***************-->
+    <button id="Banimate">Start Animatie</button>
+    <button id="Banimate2" style="float: right;">Start Tweede Animatie</button>
+    <div style="background:darkblue;height:100px;width:100px;position:absolute; margin-left: 980px;" id="Danimate2"></div>
+    <div style="background:lightblue;height:100px;width:100px;position:absolute;" id="Danimate">Ghello my friend</div>
+    <!--*****************ANIMATIE***************-->
+
+</body>
+</html>
