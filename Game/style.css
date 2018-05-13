@@ -5,5 +5,81 @@
 }
 
 body {
-    background-color: white;
+    background-color: lightblue;
+    font-family: Calibri;
+    color: Black;
+    font-size: 3em;
+}
+
+img {
+    width: 25%;
+    margin: 4%;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 41px;
+
+}
+
+#Content {
+    width: 67%;
+    float: right;
+    margin-top: 123px;
+}
+
+#Woord {
+    font-weight: bold;
+    text-align: center;
+}
+
+#LetterHolder {
+    text-align: center;
+    font-weight: bold;
+}
+
+#alfabet_div {
+    width: 1000px;
+    text-align: center;
+    margin-top: 100px;
+    margin: 0px auto;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #0066ff;
+    color: white;
+    margin: 10px;
+}
+
+button:disabled {
+    background-color: lightgrey;
+    color: black;
+}
+
+#alfabet_div button {
+    outline: none;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    background-size: cover;
+}
+
+#alfabet_div button:focus {
+    outline: none;
+    border: none;
+}
+
+#alfabet_div button.active {
+    opacity: 0.4;
 }

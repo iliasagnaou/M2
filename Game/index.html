@@ -1,48 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Galgje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
+
 <body id="GameGalgje">
     <h1>Galgje</h1>
-    <img id="galgje_kansen" src="galgjeKansen/galg12.png">
-    <ul id="Woord"></ul>
-
-    <p>Totaal aantal gokken:<span id="TotaalGokken">0</span></p>
-    <p>Goede gokken:<span id="GoedeGokken">0</span></p>
-    <p>kansen: <span id="AantalKansenOver"></span></p>
-
-    <div id="btn_alfabet">
-        <button id="a">a</button>
-        <button id="b">b</button>
-        <button id="c">c</button>
-        <button id="d">d</button>
-        <button id="e">e</button>
-        <button id="f">f</button>
-        <button id="g">g</button>
-        <button id="h">h</button>
-        <button id="i">i</button>
-        <button id="j">j</button>
-        <button id="k">k</button>
-        <button id="l">l</button>
-        <button id="m">m</button>
-        <button id="n">n</button>
-        <button id="o">o</button>
-        <button id="p">p</button>
-        <button id="q">q</button>
-        <button id="r">r</button>
-        <button id="s">s</button>
-        <button id="t">t</button>
-        <button id="u">u</button>
-        <button id="v">v</button>
-        <button id="w">w</button>
-        <button id="x">x</button>
-        <button id="y">y</button>
-        <button id="z">z</button>
+    <img id="galgje_kansen" />
+    <div id="Content">
+        <div id="LetterHolder"></div>
+        <p>Totaal aantal keren gegokt: <span id="TotaalGokken">0</span></p>
+        <p>Totaal aantal keren goed gegokt: <span id="GoedeGokken">0</span></p>
+        <p>Overige kansen: <span id="AantalKansenOver"></span></p>
     </div>
+
+
+    <div id="alfabet_div"></div>
     <script src="javascript/galgje.js"></script>
 
 </body>
+
 </html>
