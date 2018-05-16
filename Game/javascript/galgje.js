@@ -31,7 +31,7 @@ function updateGoedePogingen() {
 }
 function updateImg(AantalKansenOver) {
     "use strict";
-    $("#galgje_kansen").attr("src", "GalgjeImages/galg" + AantalKansenOver + ".png");
+    $("#galgje_kansen").attr("src", "GalgjeImages/galg" + AantalKansenOver + ".jpg");
 
 }
 function updateKansenOver() {
