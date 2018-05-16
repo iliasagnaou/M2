@@ -3,26 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Galgje</title>
+    <title>Galgje is Loading</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
-<body id="GameGalgje">
-    <h1>Galgje</h1>
-    <img id="galgje_kansen" />
-    <div id="Content">
-        <div id="LetterHolder"></div>
-        <p>Totaal aantal keren gegokt: <span id="TotaalGokken">0</span></p>
-        <p>Totaal aantal keren goed gegokt: <span id="GoedeGokken">0</span></p>
-        <p>Overige kansen: <span id="AantalKansenOver"></span></p>
+<body id="LoadingGalgje">
+    <h1>Loading Galgje...</h1>
+    <div id="preload" class="preload">
+        <div id="percentCount" class="percent-count"></div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
     </div>
 
-
-    <div id="alfabet_div"></div>
-    <script src="javascript/galgje.js"></script>
+    <script src="javascript/loading.js"></script>
 
 </body>
-
-</html>
