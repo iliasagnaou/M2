@@ -1,4 +1,5 @@
 function progress() {
+    "use strict";
     var prg = document.getElementById('progress');
     var percent = document.getElementById('percentCount');
     var counter = 5;
