@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Galgje</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="GalgjeImages/favicon.ico" type="images/ico" size="64x64">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
@@ -18,9 +19,13 @@
         <p>Totaal aantal keren goed gegokt: <span id="GoedeGokken">0</span></p>
         <p>Overige kansen: <span id="AantalKansenOver"></span></p>
     </div>
-
-
     <div id="alfabet_div" class="alfabet_div"></div>
+    
+    <audio id="gameSound" src="GalgjeImages/gameSound/themeSong.mp3" preload="auto"></audio>
+    <audio id="letterSound" src="GalgjeImages/gameSound/goedeLetter.mp3" preload="auto"></audio>
+    <audio id="youLose" src="GalgjeImages/gameSound/youLose.mp3" preload="auto"></audio>
+    <audio id="youWin" src="GalgjeImages/gameSound/youWin.mp3" preload="auto"></audio>
+    
     <script src="javascript/galgje.js"></script>
 
 </body>
