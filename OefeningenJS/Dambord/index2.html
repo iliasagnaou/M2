@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>javascripts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p class="title">Javascript Oefeningen</p>
+    </header>
+    <content>
+        <canvas id="Canvas" width="800" height="500" style="border:1px solid black;"></canvas>
+        <script>
+            
+            "use strict";
+            var canvas = document.getElementById("Canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            for (var i = 0; i < 10; i++) {
+                document.body.innerHTML += "<div>";
+                for (var j = 0; j < 10; j++) {
+                    if (i % 2 == 0) {
+                        if (j % 2 == 0) {
+                            document.body.innerHTML += "<div class=\"bBlokje\"></div>";
+                        } else {
+                            document.body.innerHTML += "<div class=\"aBlokje\"></div>";
+                        }
+                    } else {
+                        if (j % 2 == 0) {
+
+                            document.body.innerHTML += "<div class=\"aBlokje\"></div>";
+                        } else {
+                            document.body.innerHTML += "<div class=\"bBlokje\"></div>";
+                        }
+                    }
+                }
+                document.body.innerHTML += "</div>";
+                document.body.innerHTML += "<br><br><br><br>";
+            }
+            ctx.closePath();
+            ctx.stroke();
+
+        </script>
+        <div class="aBlokje"></div>
+
+        <div class="bBlokje"></div>
+    </content>
+    <footer></footer>
+</body>
+
+</html>
