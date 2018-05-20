@@ -144,26 +144,27 @@ function init() {
 }
 
 /************BEGIN GameAudio***************/
+//achtergrondmuziek
 function playGameSound() {
     "use strict";
     document.getElementById('gameSound').play();
 }
-
+//pauseren van het achtergrondmuziek
 function pauseGameSound() {
     "use strict";
     document.getElementById('gameSound').pause();
 }
-
+//muziek bij het kiezen van een goede letter
 function goedeLetterSound() {
     "use strict";
     document.getElementById('letterSound').play();
 }
-
+//muziek bij het verliezen van het spel
 function youLoseSound() {
     "use strict";
     document.getElementById('youLose').play();
 }
-
+//muziek bij het winnen van het spel
 function youWin() {
     "use strict";
     document.getElementById('youWin').play();
